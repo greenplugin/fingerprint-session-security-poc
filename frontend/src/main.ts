@@ -10,3 +10,9 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+(self as any).MonacoEnvironment = {
+  getWorkerUrl: function (moduleId: string, label: string) {
+    return 'vs/base/worker/workerMain.js';
+  },
+}

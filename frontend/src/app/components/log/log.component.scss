@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.list {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.editor {
+  flex: 1;
+  overflow: auto;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.active{
+  background-color: #ffffff;
+}

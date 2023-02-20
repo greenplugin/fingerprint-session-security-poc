@@ -1,0 +1,13 @@
+<div class="profileButtons" *ngIf="undefined !== profile">
+  <div class="loggedIn" *ngIf="profile">
+    <img [src]="profile.avatarImageUrl" [alt]="profile.name">
+    <h2>Hi, {{profile.name}}</h2>
+    <button  mat-raised-button color="primary" (click)="verify()">Verify Session</button>
+    <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+  </div>
+  <button *ngIf="!profile" mat-raised-button color="primary" (click)="login()">Login</button>
+  <button mat-raised-button color="primary" (click)="ping()">Ping</button>
+
+</div>
+<mat-spinner *ngIf="undefined === profile"></mat-spinner>
+

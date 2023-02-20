@@ -1,0 +1,14 @@
+<div class="list">
+  <mat-list>
+      <mat-list-item mat-ripple *ngFor="let logLine of logLines;let i = index;"
+                     (click)="selectLog(i)"
+                     [class.active]="i === selectedLogIndex">
+        <span matListItemTitle>{{logLine.message}}</span>
+        <span matListItemLine> - {{logLine|json | slice:0:200}}</span>
+        <span matListItemLine>{{logLine.dateTime | date:'full'}}</span>
+      </mat-list-item>
+  </mat-list>
+</div>
+<div class="editor" style="height: 100%; width: 50%;" #logsEditor>
+
+</div>
